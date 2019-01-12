@@ -179,7 +179,7 @@ namespace motor {
         buf[2] = (on >> 8) & 0xff;
         buf[3] = off & 0xff;
         buf[4] = (off >> 8) & 0xff;
-        pins.servoWritePin(PCA9685_ADDRESS, buf);
+        pins.i2cWriteBuffer(PCA9685_ADDRESS, buf);
     }
 
 
@@ -264,7 +264,7 @@ namespace motor {
 
 
     /**
-	 * Steering gear control function new2.
+	 * Steering gear control function new3.
      * S1~S8.
      * 0°~180°.
      * Dennis.
