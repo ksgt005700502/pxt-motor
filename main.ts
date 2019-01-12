@@ -264,7 +264,7 @@ namespace motor {
 
 
     /**
-	 * Steering gear control function new.
+	 * Steering gear control function new1.
      * S1~S8.
      * 0°~180°.
      * Dennis.
