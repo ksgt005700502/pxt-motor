@@ -262,15 +262,14 @@ namespace motor {
 	 * Steering gear control function new.
      * S1~S8.
      * 0°~180°.
+     * Dennis.
 	*/
     //% blockId=motor_servo1 block="新舵机Servo|%index|degree|%degree"
     //% weight=100
     //% degree.min=0 degree.max=180
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=4
     export function servo1(index: Servos, degree: number): void {
-        if (!initialized) {
-            initPCA9685()
-        }
+        
         
         setXsdemo(index + 7, degree)
     }
