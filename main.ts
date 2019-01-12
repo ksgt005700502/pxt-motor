@@ -169,7 +169,7 @@ namespace motor {
         pins.i2cWriteBuffer(PCA9685_ADDRESS, buf);
     }
 
-    function setXsdemo(addr: number, on: number): void {
+    function setXsdemo(addr: number, on: number, off: number): void {
         if (channel < 0 || channel > 15)
             return;
 
@@ -264,7 +264,7 @@ namespace motor {
 
 
     /**
-	 * Steering gear control function new3.
+	 * Steering gear control function new4.
      * S1~S8.
      * 0°~180°.
      * Dennis.
