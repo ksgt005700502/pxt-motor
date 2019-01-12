@@ -169,7 +169,7 @@ namespace motor {
         pins.i2cWriteBuffer(PCA9685_ADDRESS, buf);
     }
 
-    function setXsdemo(channel: number, on: number, off: number): void {
+    function setXsdemo(channel: number, on: number): void {
         if (channel < 0 || channel > 15)
             return;
 
@@ -272,7 +272,7 @@ namespace motor {
             initPCA9685()
         }
         
-        setXsdemo(index + 7, 0, degree)
+        setXsdemo(index + 7, degree)
     }
 
     /**
