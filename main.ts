@@ -264,7 +264,7 @@ namespace motor {
 
 
     /**
-	 * Steering gear control function new1.
+	 * Steering gear control function new2.
      * S1~S8.
      * 0°~180°.
      * Dennis.
@@ -275,7 +275,12 @@ namespace motor {
     //% index.fieldEditor="gridpicker" index.fieldOptions.columns=4
     export function servo1(index: Servos, degree: number): void {
         
-        
+        if (!initialized) {
+            initPCA9685()
+        }
+        // 100hz
+        let v_us = (degree * 10 + 1000) // 0.6ms ~ 2.4ms
+        let value = v_us * 4095 / (1000000 / 100)
         setXsdemo(index + 7, degree)
     }
 
